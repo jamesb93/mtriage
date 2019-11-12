@@ -1,0 +1,6 @@
+desc: Run inference on an AnnotatedImageArray using a custom trained model in PyTorch. Experiments from Neurips paper (to link).
+args:
+  - name: path
+    desc: The relative path to the .pkl model that has been exported using 'learn.export()' in FastAI.
+    required: true
+    input: string
