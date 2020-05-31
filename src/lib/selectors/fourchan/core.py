@@ -96,7 +96,6 @@ class FourChan(Selector):
         if board not in viable_boards:
             self.error_logger("Your chosen board does not exist on 4chan!")
             quit()
-        max_posts = int(config["max_posts"])
         # Create a HTML parser for parsing comments
         h = html2text.HTML2Text()
         h.ignore_links = False
@@ -109,6 +108,7 @@ class FourChan(Selector):
             if page_index < max_posts:
                 self.logger(f"Scraping page number: {page_index+1}")
                 for thread_index, threads in enumerate(page["threads"]):
+        max_pages = max(1, min(len(content), int(config["max_pages"])))
                     self.logger(
                         f"Extracting posts from thread number: {thread_index+1}"
                     )
