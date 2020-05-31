@@ -3,4 +3,4 @@ select:
   name: FourChan
   config:
     board: "g"
-    max_posts: 1
+    max_pages: 100
