@@ -4,7 +4,7 @@ args:
     desc: Identifier for a specific board to scrape. If not specified all boards are scraped.
     required: true
     input: string
-  - name: max_posts
-    desc: Number of total posts to scrape.
+  - name: max_pages
+    desc: Number of total pages to scrape.
     required: true
     input: integer
